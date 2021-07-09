@@ -1,0 +1,19 @@
+apiVersion: apps/v1                  # api版本
+kind: Deployment                     # 资源类型
+metadata:                            # deployment的属性
+  name: nignx-deployment             # deployment的属性
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2                         # 副本的数量
+  template:                           # pod的模板
+    metadata:                         # pod的属性
+      labels:                         # pod的标签
+        app: nginx                    # 标签名字
+    spec:                             # 规格说明
+      containers:                     # 容器属性
+        - name: nginx-container       # 容器名
+          image: nginx:1.7.9          # docker镜像
+          ports:
+            - containerPort: 80       # 端口
