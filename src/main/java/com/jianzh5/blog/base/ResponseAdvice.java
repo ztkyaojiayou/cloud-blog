@@ -2,6 +2,7 @@ package com.jianzh5.blog.base;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -13,15 +14,19 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
  * @author jam
+ * swagger相当于是寄宿在应用程序中的一个web服务，统一响应处理器拦截了应用所有的响应，对swagger-ui的响应产生了影响。
+ * 解决集成Swagger出现404问题，配置统一响应处理器拦截的范围，只拦截本项目的Controller类
  * @date 2021/7/8 10:10 上午
  */
-@RestControllerAdvice
+@RestControllerAdvice(basePackages = "com.jianh5.blog")
+@Slf4j
 public class ResponseAdvice implements ResponseBodyAdvice<Object> {
     @Autowired
     private ObjectMapper objectMapper;
 
     @Override
     public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> aClass) {
+
         return true;
     }
 
