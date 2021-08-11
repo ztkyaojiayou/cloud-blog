@@ -21,6 +21,7 @@ public class DemoController {
     @GetMapping("/aniaml")
     public Aniaml getAniaml(){
         Aniaml aniaml = new Aniaml(1,"pig");
+        log.info("aniaml is {}",aniaml);
         return aniaml;
     }
 

@@ -3,6 +3,7 @@ package com.jianzh5.blog.valid;
 import javax.validation.groups.Default;
 
 /**
+ * 分组校验接口
  * @author jam
  * @date 2021/7/30 1:54 下午
  */
@@ -24,6 +25,5 @@ public interface ValidGroup extends Default {
 
         }
     }
-
 
 }
