@@ -1,7 +1,6 @@
 package com.jianzh5.blog.valid;
 
 import org.hibernate.validator.HibernateValidator;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.validation.Validation;
@@ -19,7 +18,7 @@ public class ValidatedConfig {
      * 配置快速失败
      * @return
      */
-    @Bean
+//    @Bean
     public Validator validator(){
         ValidatorFactory validatorFactory = Validation.byProvider(HibernateValidator.class)
                 .configure()
