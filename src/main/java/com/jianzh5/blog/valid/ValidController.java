@@ -16,7 +16,7 @@ import javax.validation.groups.Default;
  * @date 2021/8/4 4:05 下午
  */
 @RestController
-@Api("参数校验")
+@Api(tags = "参数校验")
 @Slf4j
 @Validated
 public class ValidController {

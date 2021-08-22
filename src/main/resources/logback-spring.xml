@@ -56,12 +56,12 @@
 
 
 	<!--LogStash-->
-	<appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+	<!--<appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
 		<destination>172.31.0.207:5064</destination>
 		<encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
 			<customFields>{"serverName":"${applicationName}"}</customFields>
 		</encoder>
-	</appender>
+	</appender>-->
 
 
 
@@ -76,7 +76,7 @@
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="INFO_FILE" />
 		<appender-ref ref="ERROR_FILE" />
-		<appender-ref ref="logstash"/>
+		<!--<appender-ref ref="logstash"/>-->
 	</root>
 
 </configuration>
