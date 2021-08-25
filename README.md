@@ -9,7 +9,10 @@ SpringBoot系列文章导读：
 
 [2. SpringBoot 如何进行参数校验？老鸟们都是这么玩的！](http://javadaily.cn/articles/2021/08/11/1628693066732.html)
 
+[3. SpringBoot 如何生成接口文档，老鸟们都这么玩的！](http://javadaily.cn/articles/2021/08/23/1629685058548.html)
 
+
+> 如果你觉得还有什么需要补充的，欢迎找我私聊！
 
 
 ![联系方式](https://b3logfile.com/file/2021/01/image-a3579d1a.png)

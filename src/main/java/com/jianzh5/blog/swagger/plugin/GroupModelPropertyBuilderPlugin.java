@@ -19,6 +19,9 @@ import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 
+/**
+ * @author jam
+ */
 public class GroupModelPropertyBuilderPlugin implements ModelPropertyBuilderPlugin {
 
     @Override

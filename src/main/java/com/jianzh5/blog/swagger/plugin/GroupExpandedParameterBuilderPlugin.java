@@ -8,6 +8,9 @@ import springfox.documentation.spi.service.contexts.ParameterExpansionContext;
 
 import java.lang.annotation.Annotation;
 
+/**
+ * @author jam
+ */
 public class GroupExpandedParameterBuilderPlugin implements ExpandedParameterBuilderPlugin {
     @Override
     public void apply(ParameterExpansionContext context) {

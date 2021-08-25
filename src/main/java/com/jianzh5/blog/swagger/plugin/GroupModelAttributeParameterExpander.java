@@ -54,6 +54,9 @@ import static springfox.documentation.schema.Collections.isContainerType;
 import static springfox.documentation.schema.Types.isVoid;
 import static springfox.documentation.schema.Types.typeNameFor;
 
+/**
+ * @author jam
+ */
 public class GroupModelAttributeParameterExpander extends ModelAttributeParameterExpander {
     private static final Logger LOG = LoggerFactory.getLogger(ModelAttributeParameterExpander.class);
     private final FieldProvider fields;

@@ -18,17 +18,20 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.function.BiFunction;
 
+/**
+ * @author jam
+ */
 public class GroupOperationBuilderPlugin implements OperationBuilderPlugin {
-    public static final Field requestContext = ReflectionUtils.findField(OperationContext.class, "requestContext");
+    public static final Field REQUEST_CONTEXT = ReflectionUtils.findField(OperationContext.class, "requestContext");
 
     {
-        requestContext.setAccessible(true);
+        REQUEST_CONTEXT.setAccessible(true);
     }
 
-    public static final Field type = ReflectionUtils.findField(ModelRef.class, "type");
+    public static final Field TYPE = ReflectionUtils.findField(ModelRef.class, "type");
 
     {
-        type.setAccessible(true);
+        TYPE.setAccessible(true);
     }
 
 //    public static Class[] getGroupsFromResolvedMethodParameter(ResolvedMethodParameter resolvedMethodParameter) {
@@ -59,7 +62,7 @@ public class GroupOperationBuilderPlugin implements OperationBuilderPlugin {
 
     @Override
     public void apply(OperationContext context) {
-        RequestMappingContext requestMappingContext = (RequestMappingContext) ReflectionUtils.getField(requestContext, context);
+        RequestMappingContext requestMappingContext = (RequestMappingContext) ReflectionUtils.getField(REQUEST_CONTEXT, context);
 
         // 查找方法参数group参数
         Operation operation = context.operationBuilder().build();
@@ -71,7 +74,7 @@ public class GroupOperationBuilderPlugin implements OperationBuilderPlugin {
                                 .forEach(rmp -> {
                                     Class[] groups = GroupOperationBuilderPlugin.getGroups(rmp, ResolvedMethodParameter::findAnnotation);
                                     if (groups != null) {
-                                        ReflectionUtils.setField(type, parameter.getModelRef(),
+                                        ReflectionUtils.setField(TYPE, parameter.getModelRef(),
                                                 GroupDocumentationType.buildModelRefId(parameter.getModelRef().getType(), groups));
                                     }
                                 })
@@ -83,10 +86,10 @@ public class GroupOperationBuilderPlugin implements OperationBuilderPlugin {
                     .forEach(responseMessage -> {
                         Optional<ModelReference> item = responseMessage.getResponseModel().itemModel();
                         if (item.isPresent()) {
-                            ReflectionUtils.setField(type, item.get(),
+                            ReflectionUtils.setField(TYPE, item.get(),
                                     GroupDocumentationType.buildModelRefId(item.get().getType(), groups));
                         } else {
-                            ReflectionUtils.setField(type, responseMessage.getResponseModel(),
+                            ReflectionUtils.setField(TYPE, responseMessage.getResponseModel(),
                                     GroupDocumentationType.buildModelRefId(responseMessage.getResponseModel().getType(), groups));
                         }
                     });

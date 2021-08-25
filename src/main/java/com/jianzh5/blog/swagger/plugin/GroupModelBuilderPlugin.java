@@ -11,11 +11,14 @@ import springfox.documentation.spi.schema.contexts.ModelContext;
 
 import java.lang.reflect.Field;
 
+/**
+ * @author jam
+ */
 public class GroupModelBuilderPlugin implements ModelBuilderPlugin {
-    public static final Field type = ReflectionUtils.findField(ModelRef.class, "type");
+    public static final Field TYPE = ReflectionUtils.findField(ModelRef.class, "type");
 
     {
-        type.setAccessible(true);
+        TYPE.setAccessible(true);
     }
 
     @Override
@@ -36,9 +39,9 @@ public class GroupModelBuilderPlugin implements ModelBuilderPlugin {
                 continue;
             }
             if (mp.getModelRef().itemModel().isPresent()) {
-                ReflectionUtils.setField(type, mp.getModelRef().itemModel().get(), documentationType.buildModelRefId(mp.getModelRef().itemModel().get().getType()));
+                ReflectionUtils.setField(TYPE, mp.getModelRef().itemModel().get(), documentationType.buildModelRefId(mp.getModelRef().itemModel().get().getType()));
             } else {
-                ReflectionUtils.setField(type, mp.getModelRef(), documentationType.buildModelRefId(mp.getModelRef().getType()));
+                ReflectionUtils.setField(TYPE, mp.getModelRef(), documentationType.buildModelRefId(mp.getModelRef().getType()));
             }
         }
     }

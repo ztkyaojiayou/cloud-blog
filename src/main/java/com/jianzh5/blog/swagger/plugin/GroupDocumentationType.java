@@ -6,6 +6,9 @@ import springfox.documentation.spi.DocumentationType;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+/**
+ * @author jam
+ */
 public class GroupDocumentationType extends DocumentationType {
     public Class[] groups;
 
