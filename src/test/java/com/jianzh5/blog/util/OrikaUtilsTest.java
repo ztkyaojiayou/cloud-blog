@@ -144,20 +144,20 @@ public class OrikaUtilsTest {
         System.out.println(teacherGrade);
 
 
-        Map<String,String> refMap3 = new HashMap<>(1);
-        //map key 放置 源属性，value 放置 目标属性
-        refMap3.put("email","emailAddress");
-        OrikaUtils2.INSTANCE.register(Student.class,Teacher.class,refMap3);
-
-
-        Map<String,String> refMap4 = new HashMap<>(2);
-        //map key 放置 源属性，value 放置 目标属性
-        refMap4.put("studentGradeName", "teacherGradeName");
-        refMap4.put("studentList", "teacherList");
-
-
-        TeacherGrade teacherGrade2 = OrikaUtils2.INSTANCE.convert(studentGrade,TeacherGrade.class,refMap4);
-        System.out.println("instance:" + teacherGrade2);
+//        Map<String,String> refMap3 = new HashMap<>(1);
+//        //map key 放置 源属性，value 放置 目标属性
+//        refMap3.put("email","emailAddress");
+//        OrikaUtils2.INSTANCE.register(Student.class,Teacher.class,refMap3);
+//
+//
+//        Map<String,String> refMap4 = new HashMap<>(2);
+//        //map key 放置 源属性，value 放置 目标属性
+//        refMap4.put("studentGradeName", "teacherGradeName");
+//        refMap4.put("studentList", "teacherList");
+//
+//
+//        TeacherGrade teacherGrade2 = OrikaUtils2.INSTANCE.convert(studentGrade,TeacherGrade.class,refMap4);
+//        System.out.println("instance:" + teacherGrade2);
 
 
 

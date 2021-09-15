@@ -11,6 +11,8 @@ SpringBoot系列文章导读：
 
 [3. SpringBoot 如何生成接口文档，老鸟们都这么玩的！](http://javadaily.cn/articles/2021/08/23/1629685058548.html)
 
+[4. SpringBoot 如何进行对象复制，老鸟们都这么玩的！](http://javadaily.cn/articles/2021/09/15/1631687008282.html)
+
 
 > 如果你觉得还有什么需要补充的，欢迎找我私聊！
 
