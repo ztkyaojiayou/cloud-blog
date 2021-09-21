@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * swagger分组示例
  * @author jam
  * @date 2021/7/31 9:10 下午
  */
@@ -20,7 +21,7 @@ public class SwaggerController {
     @ApiOperation(value = "say",response = String.class)
     @GetMapping("/say")
     public String say(){
-        return "Hello,Swagger";
+        return "Hello,你好";
     }
 
 

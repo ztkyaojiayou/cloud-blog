@@ -12,6 +12,7 @@ import javax.validation.constraints.Email;
 import javax.validation.groups.Default;
 
 /**
+ * 参数校验示例
  * @author jam
  * @date 2021/8/4 4:05 下午
  */

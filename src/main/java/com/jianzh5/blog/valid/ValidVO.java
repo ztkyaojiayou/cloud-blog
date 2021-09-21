@@ -45,6 +45,6 @@ public class ValidVO {
     @ApiModelProperty(value = "年龄")
     @NotNull(groups = ValidGroup.Crud.Create.class)
     @Null(groups = ValidGroup.Crud.Update.class)
-    private int age;
+    private Integer age;
 
 }

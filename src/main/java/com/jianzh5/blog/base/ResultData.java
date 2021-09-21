@@ -11,12 +11,13 @@ import lombok.Data;
 public class ResultData<T> {
     /** 结果状态 ,具体状态码参见ResultData.java*/
     private int status;
+    /**响应消息**/
     private String message;
+    /**响应数据**/
     private T data;
-//    private boolean success;
+    /**接口请求时间**/
     private long timestamp ;
 
-//    private int httpStatus;
 
     public ResultData (){
         this.timestamp = System.currentTimeMillis();

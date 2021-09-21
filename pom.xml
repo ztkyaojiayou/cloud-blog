@@ -108,6 +108,12 @@
             <version>${orika.version}</version>
         </dependency>
 
+        <!--<dependency>
+            <groupId>com.github.shalousun</groupId>
+            <artifactId>smart-doc-maven-plugin</artifactId>
+            <version>2.2.7</version>
+            <type>maven-plugin</type>
+        </dependency>-->
 
 
 
@@ -133,6 +139,23 @@
                     </excludes>
                 </configuration>
             </plugin>
+
+
+
+            <!--引入smart-doc-->
+            <plugin>
+                <groupId>com.github.shalousun</groupId>
+                <artifactId>smart-doc-maven-plugin</artifactId>
+                <version>2.2.7</version>
+                <configuration>
+                    <configFile>./src/main/resources/smart-doc.json</configFile>
+                </configuration>
+            </plugin>
+
+
+
+
+
         </plugins>
     </build>
 
@@ -142,12 +165,6 @@
             <id>aliyun</id>
             <name>aliyun repo</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-        </repository>
-
-        <repository>
-            <id>repo-cache</id>
-            <name>repo-cache</name>
-            <url>http://192.168.58.50:8081/nexus/content/groups/public</url>
         </repository>
 
 

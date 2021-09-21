@@ -1,0 +1,28 @@
+{
+  "serverUrl": "http://localhost:8080",
+  "allInOne": true,
+  "outPath": "src/main/resources/static/doc",
+  "createDebugPage": true,
+  "allInOneDocFileName":"index.html",
+  "projectName": "初识smart-doc",
+  "packageFilters": "com.jianzh5.blog.smartdoc.*",
+  "errorCodeDictionaries": [{
+    "title": "title",
+    "enumClassName": "com.jianzh5.blog.base.ReturnCode",
+    "codeField": "code",
+    "descField": "message"
+  }],
+  "responseBodyAdvice":{
+    "className":"com.jianzh5.blog.base.ResultData"
+  },
+  "requestHeaders": [{
+    "name": "token",
+    "type": "string",
+    "desc": "自定义请求头 - token",
+    "value":"123456",
+    "required": false,
+    "since": "-",
+    "pathPatterns": "/smart/say",
+    "excludePathPatterns":"/smart/add,/smart/edit"
+  }]
+}
