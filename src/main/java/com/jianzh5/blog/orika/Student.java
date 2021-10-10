@@ -1,4 +1,4 @@
-package com.jianzh5.util;
+package com.jianzh5.blog.orika;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

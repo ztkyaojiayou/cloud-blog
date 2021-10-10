@@ -1,5 +1,6 @@
 package com.jianzh5.blog.base;
 
+import com.jianzh5.blog.exception.BaseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +38,15 @@ public class RestExceptionHandler {
     public ResultData<String> exception(Exception e) {
         log.error("全局异常信息 ex={}", e.getMessage(), e);
         return ResultData.fail(ReturnCode.RC500.getCode(),e.getMessage());
+    }
+
+    /**
+     * 抓取自定义异常
+     */
+    @ExceptionHandler(BaseException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResultData<String> exception(BaseException e) {
+        return ResultData.fail(e.getErrorCode(),e.getMessage());
     }
 
 

@@ -1,4 +1,4 @@
-package com.jianzh5.blog.map;
+package com.jianzh5.blog.rest;
 
 import lombok.Data;
 

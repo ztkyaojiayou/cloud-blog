@@ -1,4 +1,4 @@
-package com.jianzh5.util;
+package com.jianzh5.blog.orika;
 
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;

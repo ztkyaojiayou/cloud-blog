@@ -5,7 +5,7 @@
   "createDebugPage": true,
   "allInOneDocFileName":"index.html",
   "projectName": "初识smart-doc",
-  "packageFilters": "com.jianzh5.blog.smartdoc.*",
+  "packageFilters": "com.jianzh5.blog.smartdoc.*,com.jianzh5.blog.limit.*",
   "errorCodeDictionaries": [{
     "title": "title",
     "enumClassName": "com.jianzh5.blog.base.ReturnCode",
