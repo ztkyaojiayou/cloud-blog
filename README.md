@@ -17,6 +17,8 @@ SpringBoot系列文章导读：
 
 [6. SpringBoot 如何进行限流？老鸟们都这么玩的！](http://javadaily.cn/articles/2021/10/09/1633791565463.html)
 
+[7. SpringBoot 如何异步编程，老鸟们都这么玩的](http://javadaily.cn/articles/2021/10/09/1633791565463.html)
+
 
 > 如果你觉得还有什么需要补充的，欢迎找我私聊！
 
