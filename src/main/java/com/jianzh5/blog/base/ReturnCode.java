@@ -15,7 +15,9 @@ public enum ReturnCode {
     LIMIT_ERROR(2001,"系统繁忙,请稍后再试!"),
 
     /**服务异常**/
-    RC500(500,"系统异常，请稍后重试");
+    RC500(500,"系统异常，请稍后重试"),
+
+    ILLEGAL_ARGUMENT(3001,"非法参数");
 
 
 

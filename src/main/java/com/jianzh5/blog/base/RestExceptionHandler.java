@@ -41,6 +41,16 @@ public class RestExceptionHandler {
     }
 
     /**
+     * Assert异常
+     */
+    @ExceptionHandler({IllegalArgumentException.class,IllegalStateException.class})
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResultData<String> exception(IllegalArgumentException e) {
+        return ResultData.fail(ReturnCode.ILLEGAL_ARGUMENT.getCode(),e.getMessage());
+    }
+
+
+    /**
      * 抓取自定义异常
      */
     @ExceptionHandler(BaseException.class)
