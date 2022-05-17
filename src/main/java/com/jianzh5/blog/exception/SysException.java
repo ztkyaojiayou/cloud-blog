@@ -10,6 +10,7 @@ public class SysException extends BaseException{
 
     private static final int DEFAULT_ERROR_CODE = 540;
 
+
     public SysException(String errorMessage){
         super(DEFAULT_ERROR_CODE,errorMessage);
     }

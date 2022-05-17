@@ -1,4 +1,4 @@
-package com.jianzh5.blog.limit;
+package com.jianzh5.blog.limit.guava;
 
 import com.google.common.util.concurrent.RateLimiter;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @RestController
 @RequestMapping("/limit")
-public class LimitController {
+public class LimitGuavaController {
     /**
      * 限流策略 ： 1秒钟2个请求
      */

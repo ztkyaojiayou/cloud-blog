@@ -1,4 +1,4 @@
-package com.jianzh5.blog.limit;
+package com.jianzh5.blog.limit.guava;
 
 import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.RateLimiter;
@@ -33,7 +33,7 @@ public class LimitAop {
      */
     private final Map<String, RateLimiter> limitMap = Maps.newConcurrentMap();
 
-    @Around("@annotation(com.jianzh5.blog.limit.Limit)")
+    @Around("@annotation(com.jianzh5.blog.limit.guava.Limit)")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable{
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();

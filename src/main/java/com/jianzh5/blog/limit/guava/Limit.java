@@ -1,4 +1,4 @@
-package com.jianzh5.blog.limit;
+package com.jianzh5.blog.limit.guava;
 
 import java.lang.annotation.*;
 import java.util.concurrent.TimeUnit;

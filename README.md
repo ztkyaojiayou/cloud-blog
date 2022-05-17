@@ -23,6 +23,8 @@ SpringBoot系列文章导读：
 
 [9. SpringBoot中实现业务校验，这种方式才叫优雅！](https://javadaily.cn/post/2022020916/01a7b0039826/)
 
+[10. SpringBoot如何进行限流，老鸟们还可以这样玩！](https://javadaily.cn/post/2022051725/4828d38750c4/)
+
 
 > 如果你觉得还有什么需要补充的，欢迎找我私聊！
 
