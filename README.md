@@ -25,6 +25,8 @@ SpringBoot系列文章导读：
 
 [10. SpringBoot如何进行限流，老鸟们还可以这样玩！](https://javadaily.cn/post/2022051725/4828d38750c4/)
 
+[11. SpringBoot如何保证接口安全，老鸟们都是这么玩的！](https://javadaily.cn/post/2023020232/077ceeb4b13c/)
+
 
 > 如果你觉得还有什么需要补充的，欢迎找我私聊！
 
