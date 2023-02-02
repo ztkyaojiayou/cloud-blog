@@ -17,8 +17,13 @@ public enum ReturnCode {
     /**服务异常**/
     RC500(500,"系统异常，请稍后重试"),
 
-    ILLEGAL_ARGUMENT(3001,"非法参数");
+    ILLEGAL_ARGUMENT(3001,"非法参数"),
 
+    ILLEGAL_HEADER(4001,"非法请求头,请添加合适的签名"),
+
+    REPLAY_ERROR(4002,"访问已过期,请重新访问!"),
+
+    ARGUMENT_ERROR(4003,"您正在尝试恶意访问，已记录IP备案！");
 
 
     /**自定义状态码**/
