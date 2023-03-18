@@ -5,8 +5,9 @@
     <parent>
         <artifactId>cloud-blog</artifactId>
         <groupId>com.jianzh5</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cloud-demo</artifactId>
@@ -36,13 +37,14 @@
         </dependency>
 
 
-        <!--集成logstash-->
+        <dependency>
+            <groupId>com.jianzh5</groupId>
+            <artifactId>cloud-limit-starter</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
-            <optional>true</optional>
         </dependency>
 
 
